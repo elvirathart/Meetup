@@ -32,10 +32,12 @@ BasicUsage.play = async ({ canvasElement }) => {
   await userEvent.click(clickMeButton);
   expect(clickMeButton).toHaveTextContent("Click Me (1)");
 
-/* 
-Write two new tests:
-- Simulate another click on the "Click Me" button and assert the text
-- Simulate click on the "Reset" button and assert the text 
-*/
+  // Simulate another click on the "Click Me" button
+  await userEvent.click(clickMeButton);
+  expect(clickMeButton).toHaveTextContent("Click Me (2)");
 
+  // Simulate click on the "Reset" button
+  const resetButton = canvas.getByText(/Reset/i);
+  await userEvent.click(resetButton);
+  expect(clickMeButton).toHaveTextContent("Click Me (0)");
 };

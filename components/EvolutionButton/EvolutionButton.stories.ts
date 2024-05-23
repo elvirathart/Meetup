@@ -20,25 +20,26 @@ export const Default: Story = {};
 Default.play = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
   const canvas = within(canvasElement);
 
-  // Get the button element
-  const button = canvas.getByRole('button');
+/*
+Write tests:
+- Assert the content of the button before any interaction.
+- Assert the content after 1 click.
+- Assert the content after 2 clicks.
+- Assert the content after 3 clicks.
+*/}
 
-  // Initial state should be Pichu with yellow background
-  expect(button).toHaveTextContent('Pichu');
-  expect(button).toHaveStyle('background-color: rgb(255, 255, 0)');
+/*
+- Finish the RaichuState story.
+- Create a Story for the second state.
+- Create a Story for the third state.
+*/
 
-  // Click to change to Pikachu
-  await userEvent.click(button);
-  expect(button).toHaveTextContent('Pikachu');
-  expect(button).toHaveStyle('background-color: rgb(255, 165, 0)');
+export const RaichuState: Story = {
+  args: {
+    initialStateIndex: 0,
+  },
+};
 
-  // Click to change to Raichu
-  await userEvent.click(button);
-  expect(button).toHaveTextContent('Raichu');
-  expect(button).toHaveStyle('background-color: rgb(255, 0, 0)');
-
-  // Click to cycle back to Pichu
-  await userEvent.click(button);
-  expect(button).toHaveTextContent('Pichu');
-  expect(button).toHaveStyle('background-color: rgb(255, 255, 0)');
+RaichuState.play = async ({ }) => {
+ 
 };

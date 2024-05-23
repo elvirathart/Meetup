@@ -3,12 +3,12 @@ import { Provider } from 'react-redux';
 import { within, userEvent } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
 import store from '../../store';
-import {Counter} from './Counter'; // Assuming Counter is exported as default from './Counter'
+import { IncrementCounter } from './IncrementCounter';
 import '../../assets/styles.css';
 
-const meta: Meta<typeof Counter> = {
-  title: "Components/Counter",
-  component: Counter,
+const meta: Meta<typeof IncrementCounter> = {
+  title: "Components/IncrementCounter",
+  component: IncrementCounter,
   parameters: {
     layout: "centered",
   },
@@ -20,7 +20,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = (_args: any) => (
     <Provider store={store}>
-      <Counter {..._args} />
+      <IncrementCounter {..._args} />
     </Provider>
   );
   

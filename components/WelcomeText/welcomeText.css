@@ -1,5 +1,17 @@
 .welcome-text {
     display: flex;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    border-width: 1px;
+  }
+
+  h2 {
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  .text {
+    display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 20px;
@@ -8,5 +20,4 @@
     border-style: solid;
     border-color: lightblue;
     border-width: 1px;
-    
   }
