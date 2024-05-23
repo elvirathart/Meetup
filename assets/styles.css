@@ -1,0 +1,14 @@
+@import "../components/Button/button.css";
+@import "../components/ClickCounter/clickCounter.css";
+@import "../components/Header/header.css";
+@import "../pages/home.css";
+@import "../components/PokemonCheckboxes/pokemonCheckboxes.css";
+@import "../components/PokemonList/selectedPokemonList.css";
+@import "../components/WelcomeText/welcomeText.css";
+@import "../components/EvolutionButton/evolutionButton.css";
+@import "../components/Counter/counter.css";
+
+body {
+        background-color: white;
+  }
+

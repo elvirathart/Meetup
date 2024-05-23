@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { EvolutionButton } from './EvolutionButton';
 import { within, userEvent } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
-import '../../styles.css'
+import '../../assets/styles.css'
 
 const meta: Meta<typeof EvolutionButton> = {
   title: 'Components/EvolutionButton',

@@ -28,6 +28,6 @@
     "components/**/*.tsx",
     ".next/types/**/*.ts",
     "*.json"
-, "components/Page/Page.tsx"  ],
+, "pages/Home.tsx"  ],
   "exclude": ["node_modules"]
 }

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { within, userEvent } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
 import { ClickCounter } from "./ClickCounter";
-import '../../styles.css'
+import '../../assets/styles.css'
 
 const meta: Meta<typeof ClickCounter> = {
   title: "Components/ClickCounter",
