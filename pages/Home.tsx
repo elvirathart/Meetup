@@ -35,7 +35,7 @@ import { SelectedPokemonList } from "../components/PokemonList/SelectedPokemonLi
 import { PokemonProvider } from "../components/PokemonList/PokemonContext";
 import { WelcomeText } from "../components/WelcomeText/WelcomeText";
 import { EvolutionButton } from "../components/EvolutionButton/EvolutionButton";
-import Counter from "@/components/Counter/Counter";
+import { Counter } from "@/components/Counter/Counter";
 import { Provider } from "react-redux";
 import store from "@/store";
 
