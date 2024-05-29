@@ -11,6 +11,8 @@ import { Provider } from "react-redux";
 import store from "@/store";
 import { ClickCounterText } from "@/components/WelcomeText/ClickCounterText";
 import { EvolutionButtonText } from "@/components/WelcomeText/EvolutionButtonText";
+import { IncrementCounterText } from "@/components/WelcomeText/IncrementCounterText";
+import { PokemonListText } from "@/components/WelcomeText/PokemonListText";
 
 export const Home: React.FC = () => {
   return (
@@ -23,13 +25,16 @@ export const Home: React.FC = () => {
 
           < ClickCounterText/>
           <ClickCounter />
+
           <EvolutionButtonText/>
           <EvolutionButton />
-          
+
+          <IncrementCounterText />          
           <Provider store={store}>
             <IncrementCounter />
           </Provider>
 
+          <PokemonListText />
           <div className="pokemon-row">
             <PokemonCheckboxes />
             <SelectedPokemonList />

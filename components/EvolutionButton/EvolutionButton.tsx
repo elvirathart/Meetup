@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
-export const EvolutionButton: React.FC = () => {
-  const [stateIndex, setStateIndex] = useState(0);
+export const EvolutionButton: React.FC<{ stateIndex?: number }> = ({ stateIndex = 0 }) => {
+  const [internalStateIndex, setInternalStateIndex] = useState(stateIndex);
   const states = ['Pichu', 'Pikachu', 'Raichu'];
 
   const handleClick = () => {
-    setStateIndex((prevIndex) => (prevIndex + 1) % states.length);
+    setInternalStateIndex((prevIndex) => (prevIndex + 1) % states.length);
   };
 
   const getColor = () => {
-    switch (states[stateIndex]) {
+    switch (states[internalStateIndex]) {
       case 'Pichu':
         return 'yellow';
       case 'Pikachu':
@@ -23,7 +23,7 @@ export const EvolutionButton: React.FC = () => {
 
   return (
     <button onClick={handleClick} className={'evolution-button'} style={{ backgroundColor: getColor() }}>
-      The Pokemon Evolution Button - Click me! <br /> {states[stateIndex]}
+      The Pokemon Evolution Button - Click me! <br /> {states[internalStateIndex]}
     </button>
   );
 };

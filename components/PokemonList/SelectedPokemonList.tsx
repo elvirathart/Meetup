@@ -1,6 +1,5 @@
 import React from 'react';
 import { usePokemonContext } from './PokemonContext';
-// import './selectedPokemonList.css'
 
 export const SelectedPokemonList: React.FC = () => {
   const { selectedPokemons } = usePokemonContext();

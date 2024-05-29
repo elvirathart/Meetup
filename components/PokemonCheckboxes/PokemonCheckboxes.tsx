@@ -1,5 +1,4 @@
 import React from 'react';
-// import './pokemonCheckboxes.css'; // Ensure this CSS file is imported
 import { usePokemonContext } from '../PokemonList/PokemonContext';
 
 export const PokemonCheckboxes: React.FC = () => {

@@ -25,9 +25,9 @@ export const PokemonProvider: React.FC<PokemonProviderProps> = ({ children }) =>
   const togglePokemon = (pokemon: string) => {
     setSelectedPokemons(prevSelected => {
       if (prevSelected.includes(pokemon)) {
-        return prevSelected.filter(p => p !== pokemon);
+        return prevSelected.filter(p => p !== pokemon).sort();
       } else {
-        return [...prevSelected, pokemon];
+        return [...prevSelected, pokemon].sort();
       }
     });
   };
