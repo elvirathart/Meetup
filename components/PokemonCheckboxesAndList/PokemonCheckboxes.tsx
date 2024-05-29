@@ -1,5 +1,5 @@
 import React from 'react';
-import { usePokemonContext } from '../PokemonList/PokemonContext';
+import { usePokemonContext } from './PokemonContext';
 
 export const PokemonCheckboxes: React.FC = () => {
   const { selectedPokemons, togglePokemon } = usePokemonContext();
@@ -20,10 +20,9 @@ export const PokemonCheckboxes: React.FC = () => {
             checked={selectedPokemons.includes(pokemon)}
             onChange={handleCheckboxChange}
           />
-          <span className="pokemon-name">{pokemon}</span> {/* Wrap the text in a span */}
+          <span className="pokemon-name">{pokemon}</span>
         </label>
       ))}
     </div>
   );
 };
-

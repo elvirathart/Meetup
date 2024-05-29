@@ -1,9 +1,9 @@
 import React from "react";
 import { Header } from "../components/Header/Header";
 import { ClickCounter } from "../components/ClickCounter/ClickCounter";
-import { PokemonCheckboxes } from "../components/PokemonCheckboxes/PokemonCheckboxes";
-import { SelectedPokemonList } from "../components/PokemonList/SelectedPokemonList";
-import { PokemonProvider } from "../components/PokemonList/PokemonContext";
+import { PokemonCheckboxes } from "../components/PokemonCheckboxesAndList/PokemonCheckboxes";
+import { SelectedPokemonList } from "../components/PokemonCheckboxesAndList/SelectedPokemonList";
+import { PokemonProvider } from "../components/PokemonCheckboxesAndList/PokemonContext";
 import { WelcomeText } from "../components/WelcomeText/WelcomeText";
 import { EvolutionButton } from "../components/EvolutionButton/EvolutionButton";
 import { IncrementCounter } from "@/components/Counter/IncrementCounter";

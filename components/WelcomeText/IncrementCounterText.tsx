@@ -44,7 +44,7 @@ export const IncrementCounterText: React.FC = () => {
           - Simulate a click on the Counter button<br /> 
           - Get the updated value from the store<br />
           - Check if the initial value has been incremented.<br />
-          - Verify if the displayed value has been updated as well.
+          - Verify if the displayed value has been updated as well
         </strong>
       </p>
       Go to Storybook to run the test, interact with the component to change the value.
