@@ -3,7 +3,6 @@
 @import "../components/Header/header.css";
 @import "../pages/home.css";
 @import "../components/PokemonCheckboxesAndList/pokemonCheckboxes.css";
-@import "../components/PokemonCheckboxesAndList/selectedPokemonList.css";
 @import "../components/WelcomeText/welcomeText.css";
 @import "../components/EvolutionButton/evolutionButton.css";
 @import "../components/Counter/counter.css";

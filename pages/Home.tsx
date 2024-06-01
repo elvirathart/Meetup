@@ -13,6 +13,7 @@ import { ClickCounterText } from "@/components/WelcomeText/ClickCounterText";
 import { EvolutionButtonText } from "@/components/WelcomeText/EvolutionButtonText";
 import { IncrementCounterText } from "@/components/WelcomeText/IncrementCounterText";
 import { PokemonListText } from "@/components/WelcomeText/PokemonListText";
+import { CIText } from "@/components/WelcomeText/CIText";
 
 export const Home: React.FC = () => {
   return (
@@ -39,6 +40,8 @@ export const Home: React.FC = () => {
             <PokemonCheckboxes />
             <SelectedPokemonList />
           </div>
+
+          <CIText></CIText>
 
         </section>
       </article>

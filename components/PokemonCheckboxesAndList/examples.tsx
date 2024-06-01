@@ -39,12 +39,27 @@ DefaultState.args = {};
 DefaultState.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
-/*
-Write tests:
-- Assert that the 'selected pokemon' list is empty
-- Select two checkboxes with pokemon
-- Verify that the 'Selected Pokemon' list is updated and displays the selected pokemon
-- Bonus: Verify the list is sorted alphabetically
-*/
+  const bulbasaurCheckbox = canvas.getByLabelText('Bulbasaur');
+  const charmanderCheckbox = canvas.getByLabelText('Charmander');
+  const selectedPokemonList = canvas.getByRole('list');
 
+  // - Assert that the 'selected pokemon' list is empty
+  expect(selectedPokemonList).toBeEmptyDOMElement();
+
+  // - Select two checkboxes with pokemon
+  fireEvent.click(bulbasaurCheckbox);
+  fireEvent.click(charmanderCheckbox)
+
+  // - Verify that the 'Selected Pokemon' list is updated and displays the selected pokemon
+  expect(selectedPokemonList).toHaveTextContent('Bulbasaur');
+  expect(selectedPokemonList).toHaveTextContent('Charmander');
+
+  // - Bonus: Verify the list is sorted alphabetically
+  const listItems = canvas.getAllByRole('listitem');
+
+  const pokemonNames = listItems.map(item => item.textContent?.trim() ?? '');
+  expect(pokemonNames).toEqual(['Bulbasaur', 'Charmander']);
+  // or
+  expect(listItems[0]).toHaveTextContent('Bulbasaur');
+  expect(listItems[1]).toHaveTextContent('Charmander');
 };
