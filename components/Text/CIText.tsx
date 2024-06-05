@@ -3,7 +3,7 @@ import React from "react";
 export const CIText: React.FC = () => {
   return (
     <div className="text">
-      <h3 style={{ color: "#1ea7fd" }}>Running the test in a CI pipeline</h3>
+      <h2 style={{ color: "#1ea7fd" }}>Running the test in a CI pipeline</h2>
 
     Now that we have written our tests, adding them to a CI pipeline would be the obvious next step.<br />
     <strong>
@@ -11,7 +11,12 @@ export const CIText: React.FC = () => {
         Look for the ci command<br />
         Run the command in your terminal
         </strong><br />
-    Done!
+        If playwright is not installed you will be prompted to install it.
+        This is because behind the scenes Playwright is used as testrunner.
+        <br />
+        <strong>Run the command again and you can see the results of all the tests that we just made.</strong>
+        
+
     <p style={{ color: "#1ea7fd" }}>
     <strong>CI COMMAND</strong>
     <br />

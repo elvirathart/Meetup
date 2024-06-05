@@ -3,14 +3,13 @@ import React from "react";
 export const EvolutionButtonText: React.FC = () => {
   return (
     <div className="text">
-      <h3 style={{ color: "#1ea7fd" }}>EvolutionButton Component</h3>
+      <h2 style={{ color: "#1ea7fd" }}>EvolutionButton Component</h2>
       <p>
         Below you can find the EvolutionButton component. Click to see how it
         works. Navigate to the testfile and ...
         <br />
-        <br />
-        <strong>Write tests:
-        <br />
+        <h3>Write tests - part 1:</h3>
+        <strong>
         - Assert the content of the button before any interaction.
         <br />
         - Assert the content after 1 click.
@@ -38,27 +37,23 @@ export const EvolutionButtonText: React.FC = () => {
         addons to live edit components. You do not need to modify your
         underlying component code to use args."
       </p>
-      <p>
+    
+          <h3>Write stories and tests - part 2:</h3>
         <strong>
-        Write stories and tests:<br />
         - Finish the PichuState story by adding a test. The skeleton for the story is already there.
         <br />
         - Create a Story for the second state.
         <br />
         - Create a Story for the third state.
         </strong>
-        <br />
-      </p>
-      <p>
+
+        <h3>Add documentation:</h3>
         This button has several states and because we now created a story for each state it would be nice to document this somewhere.
         We can add a tag to the metadata that automatically generates a documentation page about our component.<br />
-        <br />
-        <strong>Add documentation:</strong><br/>
-        <strong>Go to the stories file and add in the metadata object: tags: ["autodocs"],</strong><br />
-        <br />
+        <strong>Go to the stories file and add in the metadata object: tags: ["autodocs"],</strong>
         Go to Storybook, check the folder EvolutionButton to find the file 'Docs'. 
         In this file you can now find each state of the button and its code.
-      </p>
+        <br /><br />
     </div>
   );
 };

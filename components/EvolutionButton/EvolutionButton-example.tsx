@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Provider } from 'react-redux';
+import { Provider } from "react-redux";
 import { within, userEvent } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
-import store from '../../store';
-import '../../assets/styles.css';
-import { EvolutionButton } from './EvolutionButton';
+import store from "../../store";
+import "../../assets/styles.css";
+import { EvolutionButton } from "./EvolutionButton";
 
 const meta: Meta<typeof EvolutionButton> = {
   title: "Components/EvolutionButton",
@@ -17,87 +17,70 @@ const meta: Meta<typeof EvolutionButton> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof EvolutionButton>;
 
-export const DefaultState: Story = (args: any) => (
-  <Provider store={store}>
-    <EvolutionButton {...args} />
-    </Provider>
-)
-DefaultState.args = {}
+export const DefaultState: Story = {};
 
-DefaultState.play = async ({canvasElement}) => {
+DefaultState.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
-  const button = canvas.getByRole('button');
+  const button = canvas.getByRole("button");
 
   // Default / state 0: Pichu - yellow background
-  expect(button).toHaveTextContent('Pichu');
-  expect(button).toHaveStyle('background-color: rgb(255, 255, 0)');
+  expect(button).toHaveTextContent("Pichu");
+  expect(button).toHaveStyle("background-color: rgb(255, 255, 0)");
 
   //  Pikachu
   await userEvent.click(button);
-  expect(button).toHaveTextContent('Pikachu');
-  expect(button).toHaveStyle('background-color: rgb(255, 165, 0)');
+  expect(button).toHaveTextContent("Pikachu");
+  expect(button).toHaveStyle("background-color: rgb(255, 165, 0)");
 
   // Click to change to Raichu
   await userEvent.click(button);
-  expect(button).toHaveTextContent('Raichu');
-  expect(button).toHaveStyle('background-color: rgb(255, 0, 0)');
+  expect(button).toHaveTextContent("Raichu");
+  expect(button).toHaveStyle("background-color: rgb(255, 0, 0)");
 
   // Click to cycle back to Pichu
   await userEvent.click(button);
-  expect(button).toHaveTextContent('Pichu');
-  expect(button).toHaveStyle('background-color: rgb(255, 255, 0)');
-}
+  expect(button).toHaveTextContent("Pichu");
+  expect(button).toHaveStyle("background-color: rgb(255, 255, 0)");
+};
 
+// PichuState
 export const PichuState: Story = (args: any) => (
-<Provider store={store}>
   <EvolutionButton {...args} stateIndex={0} />
-</Provider>
-)
-PichuState.args = {stateIndex: 0};
+);
 
-PichuState.play = async ({canvasElement}) => {
-  const canvas = within(canvasElement)
+PichuState.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
 
-  const button = canvas.getByRole('button');
-  expect(button).toHaveTextContent('Pichu');
-  expect(button).toHaveStyle('background-color: rgb(255, 255, 0)');
-}
+  const button = canvas.getByRole("button");
+  expect(button).toHaveTextContent("Pichu");
+  expect(button).toHaveStyle("background-color: rgb(255, 255, 0)");
+};
 
+// PikachuState
 export const PikachuState: Story = (args: any) => (
-  <Provider store={store}>
-    <EvolutionButton {...args} />
-  </Provider>
+  <EvolutionButton {...args} stateIndex={1} />
 );
 
-PikachuState.args = {
-  stateIndex: 1,
+PikachuState.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+
+  const button = canvas.getByRole("button");
+  expect(button).toHaveTextContent("Pikachu");
+  expect(button).toHaveStyle("background-color: rgb(255, 165, 0)");
 };
 
-PikachuState.play = async ({canvasElement}) => {
-  const canvas = within(canvasElement)
-
-  const button = canvas.getByRole('button');
-  expect(button).toHaveTextContent('Pikachu');
-  expect(button).toHaveStyle('background-color: rgb(255, 165, 0)');
-}
-
+// RaichuState
 export const RaichuState: Story = (args: any) => (
-  <Provider store={store}>
-    <EvolutionButton {...args} />
-  </Provider>
+  <EvolutionButton {...args} stateIndex={2} />
 );
 
-RaichuState.args = {
-  stateIndex: 2,
+RaichuState.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+
+  const button = canvas.getByRole("button");
+  expect(button).toHaveTextContent("Raichu");
+  expect(button).toHaveStyle("background-color: rgb(255, 0, 0)");
 };
-
-RaichuState.play = async ({canvasElement}) => {
-  const canvas = within(canvasElement)
-
-  const button = canvas.getByRole('button');
-  expect(button).toHaveTextContent('Raichu');
-  expect(button).toHaveStyle('background-color: rgb(255, 0, 0)');
-}

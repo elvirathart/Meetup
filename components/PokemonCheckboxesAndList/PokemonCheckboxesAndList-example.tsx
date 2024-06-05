@@ -60,6 +60,6 @@ DefaultState.play = async ({ canvasElement }) => {
   expect(listItems[0]).toHaveTextContent('Bulbasaur');
   expect(listItems[1]).toHaveTextContent('Charmander');
   // or
-  const pokemonNames = listItems.map(item => item.textContent?.trim() ?? ''); //TODO trim necessary?
+  const pokemonNames = listItems.map(item => item.textContent);
   expect(pokemonNames).toEqual(['Bulbasaur', 'Charmander']);
 };

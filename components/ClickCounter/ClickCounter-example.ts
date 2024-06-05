@@ -13,21 +13,21 @@ const meta: Meta<typeof ClickCounter> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof ClickCounter>;
 
 export const BasicUsage: Story = {};
 
 BasicUsage.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
-  const clickMeButton = canvas.getByText(/Click Me/i);
+  const clickMeButton = canvas.getByText("Click Me (0)");
   await userEvent.click(clickMeButton);
   expect(clickMeButton).toHaveTextContent("Click Me (1)");
 
   await userEvent.click(clickMeButton);
   expect(clickMeButton).toHaveTextContent("Click Me (2)");
 
-  const resetButton = canvas.getByText(/Reset/i);
+  const resetButton = canvas.getByText("Reset");
   await userEvent.click(resetButton);
   expect(clickMeButton).toHaveTextContent("Click Me (0)");
 };

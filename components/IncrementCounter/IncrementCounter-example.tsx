@@ -16,35 +16,34 @@ const meta: Meta<typeof IncrementCounter> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof IncrementCounter>;
 
-export const Default: Story = (_args: any) => (
+export const Default: Story = (args: any) => (
   <Provider store={store}>
-    <IncrementCounter {..._args} />
+    <IncrementCounter {...args} />
   </Provider>
 );
 
 Default.args = {};
 
+// Test to check the Redux store
 Default.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
-  
-// part 1
+
+  // This gets the value from the store (have a look at the files in the store folder)
   const initialValue = store.getState().counter.value;
 
-  const counterDisplay = canvas.getByText(initialValue.toString()); // toString kan weg 
-  const counterButton = canvas.getByText(/Increment/i);
-
+  // part 1
+  const counterDisplay = canvas.getByText(initialValue);
   expect(counterDisplay).toBeInTheDocument();
-  // expect(counterDisplay.textContent).toBe(initialValue.toString());
 
-// part 2
+  // part 2
+  const counterButton = canvas.getByText("Increment");
   await userEvent.click(counterButton);
 
   const updatedValue = store.getState().counter.value;
   expect(updatedValue).toBe(initialValue + 1);
 
-  const updatedDisplay = canvas.getByText(updatedValue.toString());
+  const updatedDisplay = canvas.getByText(updatedValue);
   expect(updatedDisplay).toBeInTheDocument();
-  expect(updatedDisplay.textContent).toBe(updatedValue.toString());
 };

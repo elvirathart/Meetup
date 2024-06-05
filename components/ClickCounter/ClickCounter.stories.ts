@@ -17,7 +17,7 @@ const meta: Meta<typeof ClickCounter> = {
 /* This object is exported, making it available to Storybook
 to use when rendering the story. */
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof ClickCounter>;
 
 // BasicUsage is a Story = a rendered state of a UI component.
 export const BasicUsage: Story = {};
@@ -32,7 +32,7 @@ BasicUsage.play = async ({ canvasElement }) => {
   await userEvent.click(clickMeButton);
   expect(clickMeButton).toHaveTextContent("Click Me (1)");
 
-/* Write two new tests:
+  /* Write two new tests:
 - Simulate another click on the "Click Me" button and assert the text
 - Simulate click on the "Reset" button and assert the text */
 };

@@ -16,11 +16,11 @@ const meta: Meta<typeof IncrementCounter> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof IncrementCounter>;
 
-export const Default: Story = (_args: any) => (
+export const Default: Story = (args: any) => (
   <Provider store={store}>
-    <IncrementCounter {..._args} />
+    <IncrementCounter {...args} />
   </Provider>
 );
 
@@ -30,22 +30,22 @@ Default.args = {};
 Default.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
-  // TODO explain
+  // This gets the value from the store (have a look at the files in the store folder)
   const initialValue = store.getState().counter.value;
 
   /*
   Test steps - part 1
-   - Get the initial value / the state from the store
-   - find the counter display element (text / number) by using the displayed value
-   - verify the displayed value is the same as the initial value in the store.
+   - Find the counter display by using the value (text)
+     that should be displayed (the initial value).
+   - Verify that the counter display is in the document.
   */
 
   /*
   Test steps - part 2
   - Simulate a click on the Counter button
   - Get the updated value from the store
-  - Check if the initial value has been incremented (expect the updated value to be initial value + 1)
-  - Verify if the displayed value has been updated as well
+  - Check if the initial value has been incremented 
+    (expect the updated value to be initial value + 1).
+  - Verify that the updated value is displayed in the document.
   */
-
 };

@@ -16,7 +16,7 @@ const meta: Meta<typeof PokemonCheckboxes> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof PokemonCheckboxes>;
 
 const containerStyle: React.CSSProperties = {
   display: 'flex',
@@ -43,7 +43,7 @@ DefaultState.play = async ({ canvasElement }) => {
 /*
 Write tests:
 - Expect that the 'selectedPokemonList' is empty - hint: toBeEmptyDomElement()
-- Select two checkboxes with pokemon
+- Select two checkboxes with pokemon - hint: getByLabelText(..)
 - Verify that the 'selectedPokemonList' is updated and displays the selected pokemon
 */
 
@@ -52,3 +52,4 @@ const listItems = canvas.getAllByRole('listitem');
 
 
 };
+
