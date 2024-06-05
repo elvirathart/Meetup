@@ -6,7 +6,7 @@ import { SelectedPokemonList } from "../components/PokemonCheckboxesAndList/Sele
 import { PokemonProvider } from "../components/PokemonCheckboxesAndList/PokemonContext";
 import { WelcomeText } from "../components/WelcomeText/WelcomeText";
 import { EvolutionButton } from "../components/EvolutionButton/EvolutionButton";
-import { IncrementCounter } from "@/components/Counter/IncrementCounter";
+import { IncrementCounter } from "@/components/IncrementCounter/IncrementCounter";
 import { Provider } from "react-redux";
 import store from "@/store";
 import { ClickCounterText } from "@/components/WelcomeText/ClickCounterText";

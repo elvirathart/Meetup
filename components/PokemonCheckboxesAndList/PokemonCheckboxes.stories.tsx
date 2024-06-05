@@ -39,12 +39,16 @@ DefaultState.args = {};
 DefaultState.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
+  const selectedPokemonList = canvas.getByRole('list');
 /*
 Write tests:
-- Assert that the 'selected pokemon' list is empty
+- Expect that the 'selectedPokemonList' is empty - hint: toBeEmptyDomElement()
 - Select two checkboxes with pokemon
-- Verify that the 'Selected Pokemon' list is updated and displays the selected pokemon
-- Bonus: Verify the list is sorted alphabetically
+- Verify that the 'selectedPokemonList' is updated and displays the selected pokemon
 */
+
+// Bonus: Verify the list is sorted alphabetically
+const listItems = canvas.getAllByRole('listitem');
+
 
 };

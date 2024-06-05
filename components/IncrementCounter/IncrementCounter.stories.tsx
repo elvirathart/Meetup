@@ -30,10 +30,13 @@ Default.args = {};
 Default.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
+  // TODO explain
+  const initialValue = store.getState().counter.value;
+
   /*
   Test steps - part 1
    - Get the initial value / the state from the store
-   - find the Counter button and counter display elements
+   - find the counter display element (text / number) by using the displayed value
    - verify the displayed value is the same as the initial value in the store.
   */
 
@@ -41,7 +44,7 @@ Default.play = async ({ canvasElement }) => {
   Test steps - part 2
   - Simulate a click on the Counter button
   - Get the updated value from the store
-  - Check if the initial value has been incremented
+  - Check if the initial value has been incremented (expect the updated value to be initial value + 1)
   - Verify if the displayed value has been updated as well
   */
 

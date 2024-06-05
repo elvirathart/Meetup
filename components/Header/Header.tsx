@@ -1,5 +1,4 @@
 import React from 'react';
-// import './header.css';
 import LogoImage from '../../assets/Logo.png';
 import MeetupImage from '../../assets/meetup-logo.png';
 

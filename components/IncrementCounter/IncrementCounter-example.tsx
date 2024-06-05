@@ -32,11 +32,11 @@ Default.play = async ({ canvasElement }) => {
 // part 1
   const initialValue = store.getState().counter.value;
 
-  const counterDisplay = canvas.getByText(initialValue.toString());
+  const counterDisplay = canvas.getByText(initialValue.toString()); // toString kan weg 
   const counterButton = canvas.getByText(/Increment/i);
 
   expect(counterDisplay).toBeInTheDocument();
-  expect(counterDisplay.textContent).toBe(initialValue.toString());
+  // expect(counterDisplay.textContent).toBe(initialValue.toString());
 
 // part 2
   await userEvent.click(counterButton);

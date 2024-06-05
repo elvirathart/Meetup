@@ -14,7 +14,7 @@ const meta: Meta<typeof ClickCounter> = {
   },
 };
 
-/* This object is exported by default, making it available to Stroybook
+/* This object is exported by default, making it available to Storybook
 to use when rendering the story. */
 export default meta;
 type Story = StoryObj<typeof meta>;
