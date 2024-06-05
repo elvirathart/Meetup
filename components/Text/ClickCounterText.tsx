@@ -5,31 +5,33 @@ export const ClickCounterText: React.FC = () => {
     <div className="text">
       <h3 style={{ color: "#1ea7fd" }}>ClickCounter Component</h3>
       <p>
+      The component ClickCounter is displayed directly below this text block.
+      <br /><br />
         Go back to your IDE and navigate to the folder
-        <strong> components</strong>, open the folder
-        <strong> ClickCounter</strong>. <br />
-        The component ClickCounter is displayed directly below this text block.
-        <br />
-        In the ClickCounter folder are all the files associated with this
+        <strong> components</strong>.<br /> 
+        Open the folder
+        <strong> ClickCounter</strong>.
+        <br /><br />
+        In the ClickCounter folder are the files that belong to this
         component:
         <br />
-        <strong> ClickCounter.css</strong>
-        <br />
-        <strong>ClickCounter.tsx</strong>
+        <strong>ClickCounter.tsx</strong> = the react file with the source code
         <br />
         <strong>ClickCounter.stories.tsx</strong> = the testfile
         <br />
-        <strong>examples.ts</strong> (Don't peak, I'm watching you.)
+        <strong>ClickCounter-example.ts</strong> = (Don't peak, I'm watching you.)
+        <br />
         <br /> (Usually all .stories files can be put in a folder next to
         components, to make our lives easier during this workshop they are
         conveniently placed in the folder of their component)
         <br />
         <br />
-        Open the testfile and check out the structure of the file. There are
-        comments explaining the code.
+        <strong>Open the testfile and check out the structure of the file.</strong> 
+        <br />
+        There are comments in the file explaining the code.
         <br />
         <br />
-        Before continuing writing more tests we are going to start Storybook and
+        Before we are going to write tests we are going to start Storybook and
         render the component in an isolated environment:
         <br />
         <strong>npm run storybook</strong>
