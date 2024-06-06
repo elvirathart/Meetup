@@ -4,11 +4,12 @@ export const EvolutionButtonText: React.FC = () => {
   return (
     <div className="text">
       <h2 style={{ color: "#1ea7fd" }}>EvolutionButton Component</h2>
-      <p>
+
         Below you can find the EvolutionButton component. Click to see how it
         works. Navigate to the testfile and ...
         <br />
         <h3>Write tests - part 1:</h3>
+        <p>
         <strong>
         - Assert the content of the button before any interaction.
         <br />

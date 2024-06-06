@@ -23,8 +23,8 @@ export const IncrementCounterText: React.FC = () => {
         actions.
         <br />- Dispatch: A function to send actions to the store.
       </p>
+      <h3>In short how this component works:</h3>
       <p>
-        <h3>In short how this component works:</h3>
         The current value is read from the counter state in the Redux store.
         When the button is clicked the increment action is dispatched. A reducer
         function handles the increment action by increasing the counter's value.
@@ -45,6 +45,7 @@ export const IncrementCounterText: React.FC = () => {
           decorators : [ (Story) =&gt; (&lt;Provider
           store=&#123;store&#125;&gt;&lt;Story/&gt;&lt;/Provider&gt;) ]
         </strong>
+        </p>
         <br />
         <br />
         <strong>
@@ -69,7 +70,6 @@ export const IncrementCounterText: React.FC = () => {
           value to be initial value + 1).
           <br />- Verify that the updated value is displayed in the document.
         </strong>
-      </p>
       Go to Storybook to run the test, interact with the component to change the
       value. Run test again. If you did it right, the test will succeed no
       matter the value.

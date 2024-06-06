@@ -15,8 +15,8 @@ export const PokemonListText: React.FC = () => {
         that has been covered in PokemonContext.tsx. This is done by adding the &lt;PokemonProvider&gt; around the two components.
         <br />
         To make the display in Storybook similar we also put the components in a div with styling.
+        <h3>Write tests:</h3>
         <p>
-          <h3>Write tests:</h3>
         <strong>
         - Assert that the 'Selected Pokemon' list is empty<br />
         - Select two checkboxes with pokemon<br />

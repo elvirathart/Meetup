@@ -4,46 +4,49 @@ export const ClickCounterText: React.FC = () => {
   return (
     <div className="text">
       <h2 style={{ color: "#1ea7fd" }}>ClickCounter Component</h2>
-      <p>
       The component ClickCounter is displayed directly below this text block.
       <br />
-      
       <h3>Open the test file:</h3>
+      <p>
         Go back to your IDE and navigate to the folder
-        <strong> components</strong>.<br /> 
+        <strong> components</strong>.<br />
         Open the folder
         <strong> ClickCounter</strong>.
-        <br /><br />
-        In the ClickCounter folder are the files that belong to this
-        component:
+        <br />
+        <br />
+        In the ClickCounter folder are the files that belong to this component:
         <br />
         <strong>ClickCounter.tsx</strong> = the react file with the source code
         <br />
         <strong>ClickCounter.stories.tsx</strong> = the testfile
         <br />
-        <strong>ClickCounter-example.ts</strong> = (Don't peak, I'm watching you.)
+        <strong>ClickCounter-example.ts</strong> = (Don't peak, I'm watching
+        you.)
         <br />
         <br /> (Usually all .stories files can be put in a folder next to
         components, to make our lives easier during this workshop they are
         conveniently placed in the folder of their component)
         <br />
         <br />
-        <strong>Open the testfile and check out the structure of the file.</strong> 
+        <strong>
+          Open the testfile and check out the structure of the file.
+        </strong>
         <br />
         There are comments in the file explaining the code.
-        <p style={{ color: "#1ea7fd" }}>
-          <strong>STORIES</strong>
-          <br />
-          BasicUsage is what Storybook calls a Story. You can also see this in
-          the stories testfile.
-          <br />
-          <strong>A story is a rendered state of a UI component.</strong> A
-          component can have multiple states, so it can also have multiple
-          stories. Within a story you can have multiple tests asserting
-          different parts of the component.
-        </p>
-  
-        <h3>Start Storybook:</h3>
+      </p>
+      <p style={{ color: "#1ea7fd" }}>
+        <strong>STORIES</strong>
+        <br />
+        BasicUsage is what Storybook calls a Story. You can also see this in the
+        stories testfile.
+        <br />
+        <strong>A story is a rendered state of a UI component.</strong> A
+        component can have multiple states, so it can also have multiple
+        stories. Within a story you can have multiple tests asserting different
+        parts of the component.
+      </p>
+      <h3>Start Storybook:</h3>
+      <p>
         Before we are going to write tests we are going to start Storybook and
         render the component in an isolated environment:
         <br />
@@ -60,14 +63,14 @@ export const ClickCounterText: React.FC = () => {
         Below the component you can find a tab called
         <strong> Interactions</strong>. Select this tab to see the test. Click
         around to get familiar with the environment.
-        </p>
-
-        <h3>Write tests:</h3>
+      </p>
+      <h3>Write tests:</h3>
+      <p>
         For our first tests we are keeping it simple. The buttons of the
         ClickCounter component do not have complicated states. We are going to
         write tests within the existing story BasicUsage. The first test is
         already there as example.
-        <p>
+        <br /><br />
         <strong>
           Write two new tests and run them in Storybook:
           <br />
@@ -76,7 +79,7 @@ export const ClickCounterText: React.FC = () => {
           - Simulate click on the "Reset" button and assert the text
           <br />
         </strong>
-        </p>
+      </p>
     </div>
   );
 };
