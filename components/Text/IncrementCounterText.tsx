@@ -46,10 +46,10 @@ export const IncrementCounterText: React.FC = () => {
           store=&#123;store&#125;&gt;&lt;Story/&gt;&lt;/Provider&gt;) ]
         </strong>
         </p>
-        <br />
-        <br />
-        <strong>
+
           <h3>Write tests to check the Redux store:</h3>
+          <p>
+          <strong>
           Test steps - part 1:
           <br />
           - Get the initial value / the state from the store
@@ -70,11 +70,11 @@ export const IncrementCounterText: React.FC = () => {
           value to be initial value + 1).
           <br />- Verify that the updated value is displayed in the document.
         </strong>
+        <br /><br />
       Go to Storybook to run the test, interact with the component to change the
       value. Run test again. If you did it right, the test will succeed no
       matter the value.
-      <br />
-      <br />
+      </p>
     </div>
   );
 };

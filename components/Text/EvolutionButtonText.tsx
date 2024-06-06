@@ -40,6 +40,7 @@ export const EvolutionButtonText: React.FC = () => {
       </p>
     
           <h3>Write stories and tests - part 2:</h3>
+          <p>
         <strong>
         - Finish the PichuState story by adding a test. The skeleton for the story is already there.
         <br />
@@ -47,14 +48,16 @@ export const EvolutionButtonText: React.FC = () => {
         <br />
         - Create a Story for the third state.
         </strong>
+        </p>
 
         <h3>Add documentation:</h3>
+        <p>
         This button has several states and because we now created a story for each state it would be nice to document this somewhere.
-        We can add a tag to the metadata that automatically generates a documentation page about our component.<br />
-        <strong>Go to the stories file and add in the metadata object: tags: ["autodocs"],</strong>
+        We can add a tag to the metadata that automatically generates a documentation page about our component.<br /><br />
+        <strong>Go to the stories file and add in the metadata object: <br />tags: ["autodocs"],</strong><br /><br />
         Go to Storybook, check the folder EvolutionButton to find the file 'Docs'. 
         In this file you can now find each state of the button and its code.
-        <br /><br />
+        </p>
     </div>
   );
 };

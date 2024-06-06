@@ -17,7 +17,7 @@ import { CIText } from "@/components/Text/CIText";
 
 export const Home: React.FC = () => {
   return (
-    <PokemonProvider>
+
       <article>
         <Header />
 
@@ -35,16 +35,18 @@ export const Home: React.FC = () => {
             <IncrementCounter />
           </Provider>
 
+          <PokemonProvider>
           <PokemonListText />
           <div className="pokemon-row">
             <PokemonCheckboxes />
             <SelectedPokemonList />
           </div>
+          </PokemonProvider>
 
           <CIText></CIText>
 
         </section>
       </article>
-    </PokemonProvider>
+
   );
 };
