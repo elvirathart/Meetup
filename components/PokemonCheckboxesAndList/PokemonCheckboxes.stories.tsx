@@ -39,16 +39,17 @@ DefaultState.args = {};
 DefaultState.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
-  const selectedPokemonList = canvas.getByRole('list');
+  const selectedPokemonList = canvas.getByRole('list'); 
 /*
 Write tests:
 - Expect that the 'selectedPokemonList' is empty - hint: toBeEmptyDomElement()
-- Select two checkboxes with pokemon - hint: getByLabelText(..)
+- Select two checkboxes with pokemon - hint: getByLabelText(..) to find element, use fireEvent to click
 - Verify that the 'selectedPokemonList' is updated and displays the selected pokemon
 */
 
 // Bonus: Verify the list is sorted alphabetically
-const listItems = canvas.getAllByRole('listitem');
+
+const listItems = canvas.getAllByRole('listitem'); // listitems is array
 
 
 };

@@ -36,7 +36,7 @@ Write tests - part 1:
 
 /*
 Write tests - part 2:
-- Finish the tests for the PichuState Story below:
+- Finish the tests for the PichuState Story below (assert text and color)
 */
 export const PichuState: Story = (args: any) => (
   <EvolutionButton {...args} stateIndex={0} />
