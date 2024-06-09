@@ -19,37 +19,34 @@ import { PokemonInfoText } from "@/components/Text/PokemonInfoText";
 
 export const Home: React.FC = () => {
   return (
+    <article>
+      <Header />
 
-      <article>
-        <Header />
+      <section className="storybook-page">
+        <WelcomeText />
 
-        <section className="storybook-page">
-          <WelcomeText />
+        <ClickCounterText />
+        <ClickCounter />
 
-          < ClickCounterText/>
-          <ClickCounter />
+        <EvolutionButtonText />
+        <EvolutionButton />
 
-          <EvolutionButtonText/>
-          <EvolutionButton />
+        <IncrementCounterText />
+        <Provider store={store}>
+          <IncrementCounter />
+        </Provider>
 
-          <IncrementCounterText />          
-          <Provider store={store}>
-            <IncrementCounter />
-          </Provider>
-
-          <PokemonProvider>
+        <PokemonProvider>
           <PokemonListText />
           <div className="pokemon-row">
             <PokemonCheckboxes />
             <SelectedPokemonList />
           </div>
-          </PokemonProvider>
-          <PokemonInfoText></PokemonInfoText>
-<PikachuComponent></PikachuComponent>
-          <CIText></CIText>
-
-        </section>
-      </article>
-
+        </PokemonProvider>
+        <PokemonInfoText></PokemonInfoText>
+        <PikachuComponent></PikachuComponent>
+        <CIText></CIText>
+      </section>
+    </article>
   );
 };

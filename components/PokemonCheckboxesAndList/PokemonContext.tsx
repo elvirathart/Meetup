@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from "react";
 
 type PokemonContextType = {
   selectedPokemons: string[];
@@ -10,7 +10,7 @@ const PokemonContext = createContext<PokemonContextType | undefined>(undefined);
 export const usePokemonContext = () => {
   const context = useContext(PokemonContext);
   if (!context) {
-    throw new Error('usePokemonContext must be used within a PokemonProvider');
+    throw new Error("usePokemonContext must be used within a PokemonProvider");
   }
   return context;
 };
@@ -19,13 +19,15 @@ interface PokemonProviderProps {
   children: ReactNode;
 }
 
-export const PokemonProvider: React.FC<PokemonProviderProps> = ({ children }) => {
+export const PokemonProvider: React.FC<PokemonProviderProps> = ({
+  children,
+}) => {
   const [selectedPokemons, setSelectedPokemons] = useState<string[]>([]);
 
   const togglePokemon = (pokemon: string) => {
-    setSelectedPokemons(prevSelected => {
+    setSelectedPokemons((prevSelected) => {
       if (prevSelected.includes(pokemon)) {
-        return prevSelected.filter(p => p !== pokemon).sort();
+        return prevSelected.filter((p) => p !== pokemon).sort();
       } else {
         return [...prevSelected, pokemon].sort();
       }

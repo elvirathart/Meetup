@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Button } from '../Button/Button';
+import React, { useState } from "react";
+import { Button } from "../Button/Button";
 
 export const ClickCounter: React.FC = () => {
   const [clickCount, setClickCount] = useState(0);
 
   const handleClick = () => {
-    setClickCount(prevCount => prevCount + 1);
+    setClickCount((prevCount) => prevCount + 1);
   };
 
   const handleReset = () => {
@@ -14,7 +14,7 @@ export const ClickCounter: React.FC = () => {
 
   return (
     <div className="click-counter-container">
-      <Button label={`Click Me (${clickCount})`} onClick={handleClick}/>
+      <Button label={`Click Me (${clickCount})`} onClick={handleClick} />
       <Button label="Reset" onClick={handleReset} />
     </div>
   );

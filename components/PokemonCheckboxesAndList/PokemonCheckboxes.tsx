@@ -1,5 +1,5 @@
-import React from 'react';
-import { usePokemonContext } from './PokemonContext';
+import React from "react";
+import { usePokemonContext } from "./PokemonContext";
 
 export const PokemonCheckboxes: React.FC = () => {
   const { selectedPokemons, togglePokemon } = usePokemonContext();
@@ -11,18 +11,20 @@ export const PokemonCheckboxes: React.FC = () => {
 
   return (
     <div className="pokemon-checkboxes-container">
-            <h2>Select Pokémon</h2>
-      {['Bulbasaur', 'Charmander', 'Squirtle', 'Pikachu', 'Jigglypuff'].map(pokemon => (
-        <label key={pokemon}>
-          <input
-            type="checkbox"
-            name={pokemon}
-            checked={selectedPokemons.includes(pokemon)}
-            onChange={handleCheckboxChange}
-          />
-          <span className="pokemon-name">{pokemon}</span>
-        </label>
-      ))}
+      <h2>Select Pokémon</h2>
+      {["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Jigglypuff"].map(
+        (pokemon) => (
+          <label key={pokemon}>
+            <input
+              type="checkbox"
+              name={pokemon}
+              checked={selectedPokemons.includes(pokemon)}
+              onChange={handleCheckboxChange}
+            />
+            <span className="pokemon-name">{pokemon}</span>
+          </label>
+        ),
+      )}
     </div>
   );
 };

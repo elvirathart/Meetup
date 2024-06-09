@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface ButtonProps {
   primary?: boolean;
@@ -6,17 +6,9 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-export const Button = ({
-  primary = false,
-  label,
-  ...props
-}: ButtonProps) => {
+export const Button = ({ primary = false, label, ...props }: ButtonProps) => {
   return (
-    <button
-      type="button"
-      className={'storybook-button'}
-      {...props}
-    >
+    <button type="button" className={"storybook-button"} {...props}>
       {label}
     </button>
   );

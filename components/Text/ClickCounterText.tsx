@@ -70,7 +70,8 @@ export const ClickCounterText: React.FC = () => {
         ClickCounter component do not have complicated states. We are going to
         write tests within the existing story BasicUsage. The first test is
         already there as example.
-        <br /><br />
+        <br />
+        <br />
         <strong>
           Write two new tests and run them in Storybook:
           <br />

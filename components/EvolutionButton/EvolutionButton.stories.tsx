@@ -46,7 +46,6 @@ PichuState.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
   const button = canvas.getByRole("button");
-
 };
 
 /*

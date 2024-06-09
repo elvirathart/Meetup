@@ -1,6 +1,6 @@
-import React from 'react';
-import LogoImage from '../../assets/Logo.png';
-import MeetupImage from '../../assets/meetup-logo.png';
+import React from "react";
+import LogoImage from "../../assets/Logo.png";
+import MeetupImage from "../../assets/meetup-logo.png";
 
 export const Header = () => (
   <header>
@@ -11,7 +11,7 @@ export const Header = () => (
       </div>
 
       <div>
-        <div style={{ marginTop: '10px', marginRight: '10px' }}>
+        <div style={{ marginTop: "10px", marginRight: "10px" }}>
           <img src={MeetupImage.src} alt="Meetup" width={150} />
         </div>
       </div>
