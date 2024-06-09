@@ -14,6 +14,8 @@ import { EvolutionButtonText } from "@/components/Text/EvolutionButtonText";
 import { IncrementCounterText } from "@/components/Text/IncrementCounterText";
 import { PokemonListText } from "@/components/Text/PokemonListText";
 import { CIText } from "@/components/Text/CIText";
+import PikachuComponent from "@/components/PokemonInfo/PokemonInfo";
+import { PokemonInfoText } from "@/components/Text/PokemonInfoText";
 
 export const Home: React.FC = () => {
   return (
@@ -42,7 +44,8 @@ export const Home: React.FC = () => {
             <SelectedPokemonList />
           </div>
           </PokemonProvider>
-
+          <PokemonInfoText></PokemonInfoText>
+<PikachuComponent></PikachuComponent>
           <CIText></CIText>
 
         </section>

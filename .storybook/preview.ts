@@ -1,5 +1,5 @@
 import type { Preview } from "@storybook/react";
-import { initialize, mswDecorator } from 'msw-storybook-addon';
+import { initialize, mswDecorator, mswLoader } from 'msw-storybook-addon';
 
 const preview: Preview = {
   parameters: {
@@ -8,12 +8,8 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
-    },
+    },loaders: [mswLoader],
   },
 };
-
-// Initialize MSW
-initialize();
-export const decorators = [mswDecorator];
 
 export default preview;
