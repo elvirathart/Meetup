@@ -1,15 +1,10 @@
-import type { Preview } from "@storybook/react";
-import { initialize, mswDecorator, mswLoader } from 'msw-storybook-addon';
+import { initialize, mswDecorator } from 'msw-storybook-addon';
+import { handlers } from '../mocks/handlers';
 
-const preview: Preview = {
-  parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
-    },loaders: [mswLoader],
-  },
+initialize();
+
+export const decorators = [mswDecorator];
+
+export const parameters = {
+  msw: { handlers },
 };
-
-export default preview;
