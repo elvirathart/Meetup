@@ -16,6 +16,7 @@ import { PokemonListText } from "@/components/Text/PokemonListText";
 import { CIText } from "@/components/Text/CIText";
 import PikachuComponent from "@/components/PokemonInfo/PokemonInfo";
 import { PokemonInfoText } from "@/components/Text/PokemonInfoText";
+import { TestCoverageText } from "@/components/Text/TestCoverage";
 
 export const Home: React.FC = () => {
   return (
@@ -45,6 +46,7 @@ export const Home: React.FC = () => {
         </PokemonProvider>
         <PokemonInfoText></PokemonInfoText>
         <PikachuComponent></PikachuComponent>
+        <TestCoverageText></TestCoverageText>
         <CIText></CIText>
       </section>
     </article>

@@ -4,8 +4,7 @@ export const CIText: React.FC = () => {
   return (
     <div className="text">
       <h2 style={{ color: "#1ea7fd" }}>Running the test in a CI pipeline</h2>
-      Now that we have written our tests, adding them to a CI pipeline would be
-      the obvious next step.
+      The obvious last step would be adding our tests to a CI pipeline.
       <br />
       <strong>
         Go to the package.json
